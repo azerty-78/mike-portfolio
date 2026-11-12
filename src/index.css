@@ -1,13 +1,148 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg: #f3eee7;
+    --bg-elevated: #ebe4db;
+    --surface: #fffcfa;
+    --text: #1a1412;
+    --text-muted: #6e635e;
+    --accent: #7a1f2b;
+    --taupe: #8b7d7b;
+    --leaf: #6f8f5b;
+    --header-h: 4.5rem;
+    --radius: 0.9rem;
+    --radius-sm: 0.65rem;
+    --radius-lg: 1.25rem;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+
+  body {
+    @apply bg-ink text-mist font-sans antialiased;
+    background-image:
+      radial-gradient(ellipse 80% 45% at 10% -5%, rgba(122, 31, 43, 0.08), transparent 55%),
+      radial-gradient(ellipse 55% 40% at 95% 5%, rgba(111, 143, 91, 0.1), transparent 50%),
+      radial-gradient(ellipse 70% 45% at 50% 100%, rgba(139, 125, 123, 0.14), transparent 60%);
+    background-attachment: fixed;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background: rgba(122, 31, 43, 0.22);
+    color: #1a1412;
+  }
+
+  :focus-visible {
+    outline: 2px solid #7a1f2b;
+    outline-offset: 3px;
+  }
+
+  button,
+  input,
+  textarea,
+  select,
+  img,
+  article,
+  form,
+  aside,
+  .radius-target {
+    border-radius: var(--radius);
+  }
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@layer components {
+  .site-container {
+    @apply mx-auto w-full max-w-site px-gutter;
+  }
+
+  .section-pad {
+    @apply py-section;
+  }
+
+  .eyebrow {
+    @apply font-mono text-[11px] uppercase tracking-[0.22em] text-signal;
+  }
+
+  .section-title {
+    @apply font-display text-display-lg text-mist;
+  }
+
+  .muted {
+    @apply text-mist-muted;
+  }
+
+  .hairline {
+    @apply border-mist/10;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 bg-signal px-6 py-3 font-display text-sm font-medium tracking-wide text-ink transition-all duration-300 ease-premium hover:bg-mist hover:text-ink;
+    border-radius: var(--radius);
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 border border-mist/15 px-6 py-3 font-display text-sm font-medium tracking-wide text-mist transition-all duration-300 ease-premium hover:border-signal hover:text-signal;
+    border-radius: var(--radius);
+  }
+
+  .surface-card {
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+  }
+
+  .chip {
+    border-radius: var(--radius-sm);
+  }
+
+  .grid-lines {
+    background-image:
+      linear-gradient(to right, rgba(26, 20, 18, 0.05) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(26, 20, 18, 0.05) 1px, transparent 1px);
+    background-size: 72px 72px;
+  }
+
+  .lang-toggle {
+    @apply inline-flex items-center overflow-hidden border border-mist/15 font-mono text-[11px] uppercase tracking-[0.14em] text-mist-muted;
+    border-radius: var(--radius);
+  }
+
+  .lang-toggle button {
+    @apply px-2.5 py-2 transition-colors;
+    border-radius: 0;
+  }
+
+  .lang-toggle button.is-active {
+    @apply bg-signal text-ink;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .mask-fade-b {
+    mask-image: linear-gradient(to bottom, black 60%, transparent);
+  }
 }

@@ -1,70 +1,136 @@
-# Getting Started with Create React App
+# Mike Portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Portfolio personnel de **Lontchi Fontsa Michael**, ingénieur en génie logiciel.
 
-## Available Scripts
+Site one-page premium, bilingue (FR / EN), pensé pour présenter le parcours, les compétences, les expériences et les projets de manière claire et professionnelle.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## Aperçu
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Hero immersif avec portrait professionnel
+- Sections : À propos, Compétences, Expériences, Projets, Formation, Soft skills, Contact
+- Basculement de langue **FR / EN** (mémorisé)
+- Animations fluides (Framer Motion) avec respect de `prefers-reduced-motion`
+- Design responsive (desktop, tablette, mobile)
+- Formulaire de contact via `mailto`
+- Prêt pour un déploiement sur Vercel ou Netlify
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Stack technique
 
-### `npm test`
+| Technologie | Usage |
+|---|---|
+| React 19 | Interface |
+| Create React App | Build & tooling |
+| Tailwind CSS | Styles & design system |
+| Framer Motion | Animations |
+| Lucide React | Icônes |
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Démarrage
 
-### `npm run build`
+### Prérequis
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Node.js 18+ recommandé
+- npm
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Installation
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+git clone https://github.com/azerty-78/Mike-portfolio.git
+cd Mike-portfolio
+npm install
+```
 
-### `npm run eject`
+### Lancer en développement
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```bash
+npm start
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+L’application s’ouvre sur [http://localhost:3000](http://localhost:3000).
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Build de production
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```bash
+npm run build
+```
 
-## Learn More
+Le dossier `build/` contient les fichiers prêts à être déployés.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Structure du projet
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```text
+src/
+├── assets/images/          # Photos et médias
+├── components/
+│   ├── layout/             # Header, Footer
+│   ├── sections/           # Sections de la page
+│   ├── ui/                 # Boutons, curseur, loader, etc.
+│   └── animations/         # Révélations au scroll
+├── data/                   # Données structurées (projets, expériences…)
+├── hooks/                  # Hooks personnalisés
+├── i18n/                   # Traductions FR / EN
+├── App.js
+└── index.js
+```
 
-### Code Splitting
+## Personnalisation
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+### Textes & traductions
 
-### Analyzing the Bundle Size
+Les contenus bilingues se trouvent dans :
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```text
+src/i18n/translations.js
+```
 
-### Making a Progressive Web App
+### Données professionnelles
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+| Fichier | Contenu |
+|---|---|
+| `src/data/personalInfo.js` | Identité, contacts, photo |
+| `src/data/skills.js` | Compétences techniques |
+| `src/data/experiences.js` | Parcours professionnel |
+| `src/data/projects.js` | Projets (ajouter `image`, `liveUrl`, `githubUrl` si disponibles) |
+| `src/data/education.js` | Formation & certifications |
 
-### Advanced Configuration
+### Palette
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Le thème s’inspire du portrait professionnel (sable, taupe, bordeaux). Les tokens sont définis dans :
 
-### Deployment
+```text
+tailwind.config.js
+src/index.css
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Scripts npm
 
-### `npm run build` fails to minify
+| Commande | Description |
+|---|---|
+| `npm start` | Serveur de développement |
+| `npm run build` | Build production |
+| `npm test` | Tests |
+| `npm run eject` | Éjection CRA (irréversible) |
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Déploiement
+
+Compatible avec :
+
+- [Vercel](https://vercel.com)
+- [Netlify](https://www.netlify.com)
+- GitHub Pages (via build statique)
+
+Commande de build : `npm run build`  
+Dossier de sortie : `build`
+
+## Auteur
+
+**Lontchi Fontsa Michael**  
+Ingénieur en Génie Logiciel — Yaoundé, Cameroun
+
+- Email : [lontchimike@gmail.com](mailto:lontchimike@gmail.com)
+- LinkedIn : [linkedin.com/in/lontchi](https://www.linkedin.com/in/lontchi/)
+
+## Licence
+
+Projet personnel — tous droits réservés.

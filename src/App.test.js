@@ -1,8 +1,7 @@
 import { render, screen } from '@testing-library/react';
 import App from './App';
 
-test('renders learn react link', () => {
+test('affiche le hero du portfolio', () => {
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+  expect(screen.getByText(/INGÉNIEUR LOGICIEL BASÉ AU CAMEROUN/i)).toBeInTheDocument();
 });
