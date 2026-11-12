@@ -10,6 +10,7 @@ import {
   Experience,
   Hero,
   Projects,
+  Roles,
   Skills,
   SoftSkills,
 } from './components/sections';
@@ -25,6 +26,7 @@ function App() {
         <main>
           <Hero />
           <About />
+          <Roles />
           <Skills />
           <Experience />
           <Projects />

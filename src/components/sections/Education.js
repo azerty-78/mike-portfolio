@@ -17,23 +17,25 @@ export default function Education() {
               <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-signal">
                 {t.education.formation}
               </p>
-              <ul className="mt-6 space-y-0 border-t border-mist/10">
-                {education.map((item) => (
-                  <li
-                    key={item.id}
-                    className="grid gap-2 border-b border-mist/10 py-6 md:grid-cols-[1fr_auto] md:items-start md:gap-8"
-                  >
-                    <div>
-                      <h3 className="font-display text-xl text-mist md:text-2xl">
-                        {t.education.degrees[item.id]}
+              <ul className="mt-6 space-y-4">
+                {education.map((item) => {
+                  const degree = t.education.degrees[item.id];
+                  return (
+                    <li
+                      key={item.id}
+                      className="rounded-[var(--radius-lg)] border border-mist/10 bg-paper p-5 shadow-sm md:p-6"
+                    >
+                      <p className="font-mono text-xs uppercase tracking-[0.16em] text-mist-muted">
+                        {item.period}
+                      </p>
+                      <h3 className="mt-3 font-display text-xl text-mist md:text-2xl">
+                        {degree.title}
                       </h3>
+                      <p className="mt-2 text-sm text-signal">{degree.detail}</p>
                       <p className="mt-2 text-sm text-mist-muted">{item.school}</p>
-                    </div>
-                    <p className="font-mono text-xs uppercase tracking-[0.16em] text-mist-muted">
-                      {item.period}
-                    </p>
-                  </li>
-                ))}
+                    </li>
+                  );
+                })}
               </ul>
             </div>
           </Reveal>
@@ -48,10 +50,15 @@ export default function Education() {
                   {certifications.completed.map((cert) => (
                     <li
                       key={cert.id}
-                      className="rounded-[var(--radius)] border border-mist/10 bg-paper px-5 py-4 shadow-sm transition-colors hover:border-signal/30"
+                      className="flex items-start justify-between gap-4 rounded-[var(--radius)] border border-mist/10 bg-paper px-5 py-4 shadow-sm transition-colors hover:border-signal/30"
                     >
-                      <h3 className="font-display text-lg text-mist">{cert.title}</h3>
-                      <p className="mt-1 text-sm text-mist-muted">{cert.issuer}</p>
+                      <div>
+                        <h3 className="font-display text-lg text-mist">{cert.title}</h3>
+                        <p className="mt-1 text-sm text-mist-muted">{cert.issuer}</p>
+                      </div>
+                      <span className="mt-1 shrink-0 font-mono text-[10px] uppercase tracking-[0.16em] text-leaf">
+                        {t.education.obtained}
+                      </span>
                     </li>
                   ))}
                 </ul>

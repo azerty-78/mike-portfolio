@@ -1,13 +1,13 @@
 export const education = [
   {
     id: 'ingenieur',
-    school: 'IAI Cameroun',
-    period: '2022–2025',
+    school: 'IAI Cameroun, Yaoundé',
+    period: '2022 – 2025',
   },
   {
     id: 'dts',
-    school: 'IAI Cameroun',
-    period: '2022–2024',
+    school: 'IAI Cameroun, Yaoundé',
+    period: '2022 – 2024',
   },
 ];
 

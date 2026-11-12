@@ -1,5 +1,5 @@
 import { motion, useReducedMotion } from 'framer-motion';
-import { ArrowDown, ArrowUpRight } from 'lucide-react';
+import { ArrowDown, ArrowUpRight, Download } from 'lucide-react';
 import { personalInfo } from '../../data';
 import { useLanguage } from '../../i18n/LanguageContext';
 import Button from '../ui/Button';
@@ -74,6 +74,14 @@ export default function Hero() {
             </Button>
             <Button href="#contact" variant="ghost">
               {t.hero.ctaContact}
+            </Button>
+            <Button
+              href={personalInfo.cvUrl}
+              download={personalInfo.cvFileName}
+              variant="ghost"
+            >
+              {t.hero.ctaCv}
+              <Download size={16} />
             </Button>
           </motion.div>
         </div>

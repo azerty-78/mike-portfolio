@@ -1,11 +1,15 @@
 export const skillCategories = [
   {
     id: 'languages',
-    items: ['C', 'JavaScript', 'PHP', 'Python'],
+    items: ['Python', 'JavaScript', 'PHP'],
   },
   {
     id: 'frameworks',
-    items: ['React', 'Node.js', 'Django', 'Flask'],
+    items: ['Django', 'Flask', 'React', 'Node.js'],
+  },
+  {
+    id: 'api',
+    items: ['REST API'],
   },
   {
     id: 'databases',
@@ -13,7 +17,7 @@ export const skillCategories = [
   },
   {
     id: 'tools',
-    items: ['Git', 'Docker', 'Visual Studio Code', 'Eclipse'],
+    items: ['Docker', 'Git', 'Visual Studio Code', 'Eclipse'],
   },
   {
     id: 'methods',

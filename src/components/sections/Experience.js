@@ -4,10 +4,10 @@ import Reveal from '../animations/Reveal';
 import SectionHeading from '../ui/SectionHeading';
 
 export default function Experience() {
-  const { t } = useLanguage();
+  const { lang, t } = useLanguage();
 
   return (
-    <section id="experiences" className="section-pad relative">
+    <section id="experiences" className="section-pad relative bg-ink-50">
       <div className="site-container">
         <SectionHeading
           eyebrow={t.experience.eyebrow}
@@ -37,7 +37,7 @@ export default function Experience() {
                       />
                     </div>
 
-                    <div className="border-b border-mist/10 pb-10 md:grid md:grid-cols-[1fr_1.2fr] md:gap-10 md:pb-14">
+                    <div className="rounded-[var(--radius-lg)] border border-mist/10 bg-paper p-6 shadow-sm md:grid md:grid-cols-[1fr_1.15fr] md:gap-10 md:p-8">
                       <div>
                         <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-mist-muted">
                           {content.period}
@@ -48,10 +48,21 @@ export default function Experience() {
                         <h3 className="mt-3 font-display text-2xl text-mist md:text-3xl">
                           {content.role}
                         </h3>
-                        <p className="mt-2 text-sm text-mist-muted md:text-base">{job.company}</p>
+                        <p className="mt-2 text-sm text-mist-soft md:text-base">{job.company}</p>
+                        <p className="mt-1 text-sm text-mist-muted">
+                          {job.place} · {job.contract[lang]}
+                        </p>
+                        {content.summary ? (
+                          <p className="mt-4 text-sm font-medium text-signal">{content.summary}</p>
+                        ) : null}
+                        {job.stack ? (
+                          <p className="mt-3 font-mono text-[11px] uppercase tracking-[0.14em] text-mist-muted">
+                            {t.experience.stackLabel} : {job.stack[lang]}
+                          </p>
+                        ) : null}
                       </div>
 
-                      <ul className="mt-4 space-y-3 md:mt-0">
+                      <ul className="mt-5 space-y-3 md:mt-1">
                         {content.responsibilities.map((item) => (
                           <li
                             key={item}

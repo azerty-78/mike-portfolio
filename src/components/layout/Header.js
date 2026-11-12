@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
-import { Menu, X } from 'lucide-react';
+import { Download, Menu, X } from 'lucide-react';
 import { personalInfo } from '../../data';
 import { useLanguage } from '../../i18n/LanguageContext';
 import { useActiveSection } from '../../hooks/useActiveSection';
@@ -56,7 +56,7 @@ export default function Header() {
           </span>
         </a>
 
-        <nav className="hidden items-center gap-1 lg:flex" aria-label={t.nav.mainNav}>
+        <nav className="hidden items-center gap-0.5 xl:flex" aria-label={t.nav.mainNav}>
           {navLinks.map((link) => {
             const active = activeId === link.id;
             return (
@@ -67,7 +67,7 @@ export default function Header() {
                   e.preventDefault();
                   handleNav(link.id);
                 }}
-                className={`relative px-3 py-2 font-sans text-[13px] transition-colors ${
+                className={`relative px-2.5 py-2 font-sans text-[12px] transition-colors ${
                   active ? 'text-mist' : 'text-mist-muted hover:text-mist'
                 }`}
               >
@@ -88,6 +88,16 @@ export default function Header() {
           <LanguageToggle className="hidden sm:inline-flex" />
 
           <Button
+            href={personalInfo.cvUrl}
+            download={personalInfo.cvFileName}
+            variant="ghost"
+            className="hidden !px-3 !py-2 lg:inline-flex"
+          >
+            <Download size={14} />
+            {t.nav.downloadCv}
+          </Button>
+
+          <Button
             href="#contact"
             className="hidden !px-4 !py-2.5 md:inline-flex"
             onClick={(e) => {
@@ -100,7 +110,7 @@ export default function Header() {
 
           <button
             type="button"
-            className="inline-flex h-10 w-10 items-center justify-center rounded-[var(--radius)] border border-mist/10 text-mist lg:hidden"
+            className="inline-flex h-10 w-10 items-center justify-center rounded-[var(--radius)] border border-mist/10 text-mist xl:hidden"
             aria-label={open ? t.nav.closeMenu : t.nav.openMenu}
             aria-expanded={open}
             onClick={() => setOpen((v) => !v)}
@@ -113,7 +123,7 @@ export default function Header() {
       <AnimatePresence>
         {open ? (
           <motion.div
-            className="border-t border-mist/5 bg-ink lg:hidden"
+            className="border-t border-mist/5 bg-ink xl:hidden"
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: 'auto', opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
@@ -143,8 +153,17 @@ export default function Header() {
                 </motion.a>
               ))}
               <Button
-                href="#contact"
+                href={personalInfo.cvUrl}
+                download={personalInfo.cvFileName}
+                variant="ghost"
                 className="mt-6 w-full"
+              >
+                <Download size={16} />
+                {t.nav.downloadCv}
+              </Button>
+              <Button
+                href="#contact"
+                className="mt-3 w-full"
                 onClick={(e) => {
                   e.preventDefault();
                   handleNav('contact');

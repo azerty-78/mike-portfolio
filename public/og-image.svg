@@ -1,9 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-label="Michael Lontchi Portfolio">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-label="Michael Lontchi Fontsa Portfolio">
   <rect width="1200" height="630" fill="#F3EEE7"/>
   <circle cx="980" cy="160" r="180" fill="none" stroke="#7A1F2B" stroke-opacity="0.35" stroke-width="2"/>
   <circle cx="1040" cy="220" r="110" fill="none" stroke="#8B7D7B" stroke-opacity="0.4" stroke-width="1"/>
-  <text x="80" y="180" font-family="Space Grotesk, Arial, sans-serif" font-size="28" fill="#7A1F2B" letter-spacing="6">SOFTWARE ENGINEER</text>
-  <text x="80" y="290" font-family="Space Grotesk, Arial, sans-serif" font-size="72" font-weight="600" fill="#1A1412">Michael Lontchi</text>
-  <text x="80" y="370" font-family="Inter, Arial, sans-serif" font-size="28" fill="#6E635E">I build digital experiences &amp; software solutions.</text>
-  <text x="80" y="540" font-family="JetBrains Mono, monospace" font-size="20" fill="#8B7D7B">Yaoundé, Cameroun</text>
+  <text x="80" y="180" font-family="Space Grotesk, Arial, sans-serif" font-size="28" fill="#7A1F2B" letter-spacing="6">FULL-STACK DEVELOPER</text>
+  <text x="80" y="290" font-family="Space Grotesk, Arial, sans-serif" font-size="64" font-weight="600" fill="#1A1412">Michael Lontchi Fontsa</text>
+  <text x="80" y="370" font-family="Inter, Arial, sans-serif" font-size="28" fill="#6E635E">Web apps, REST APIs &amp; databases.</text>
+  <text x="80" y="540" font-family="JetBrains Mono, monospace" font-size="20" fill="#8B7D7B">Yaoundé, Cameroun · IAI-Cameroun</text>
 </svg>

@@ -1,36 +1,37 @@
 import portraitImage from '../assets/images/michael-lontchi.jpg';
 
 export const personalInfo = {
-  fullName: 'LONTCHI FONTSA Michael',
+  fullName: 'Michael Lontchi Fontsa',
   shortName: 'Michael Lontchi',
   monogram: 'ML',
-  title: 'Ingénieur en Génie Logiciel | Software Engineer',
+  title: 'Développeur Full-Stack · Génie Logiciel',
   location: {
     fr: 'Yaoundé, Cameroun',
     en: 'Yaoundé, Cameroon',
   },
-  phone: '+237 699-657-458',
+  phone: '+237 699 657 458',
   phoneHref: 'tel:+237699657458',
   email: 'lontchimike@gmail.com',
-  linkedin: 'https://www.linkedin.com/in/lontchi/',
+  cvUrl: '/docs/CV_Michael_LONTCHI_FONTSA.pdf',
+  cvFileName: 'CV_Michael_LONTCHI_FONTSA.pdf',
   portrait: portraitImage,
   portraitAlt: {
-    fr: 'Portrait professionnel de Michael Lontchi',
-    en: 'Professional portrait of Michael Lontchi',
+    fr: 'Portrait professionnel de Michael Lontchi Fontsa',
+    en: 'Professional portrait of Michael Lontchi Fontsa',
   },
-  navIds: ['accueil', 'apropos', 'competences', 'experiences', 'projets', 'contact'],
+  navIds: ['accueil', 'apropos', 'postes', 'competences', 'experiences', 'projets', 'contact'],
 };
 
 export const seo = {
   fr: {
-    title: 'Michael Lontchi — Ingénieur en Génie Logiciel',
+    title: 'Michael Lontchi Fontsa — Développeur Full-Stack',
     description:
-      'Portfolio de Lontchi Fontsa Michael, ingénieur logiciel basé à Yaoundé. Conception d’applications web, API REST, bases de données et architectures logicielles.',
+      'Portfolio de Michael Lontchi Fontsa, développeur Full-Stack diplômé de l’IAI-Cameroun. Applications web, API REST, bases de données, React, Node.js et PHP.',
   },
   en: {
-    title: 'Michael Lontchi — Software Engineer',
+    title: 'Michael Lontchi Fontsa — Full-Stack Developer',
     description:
-      'Portfolio of Lontchi Fontsa Michael, software engineer based in Yaoundé. Web applications, REST APIs, databases and software architecture.',
+      'Portfolio of Michael Lontchi Fontsa, Full-Stack developer graduated from IAI-Cameroon. Web applications, REST APIs, databases, React, Node.js and PHP.',
   },
   url: 'https://michael-lontchi.vercel.app',
   image: '/og-image.svg',

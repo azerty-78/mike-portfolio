@@ -1,7 +1,6 @@
 import { ArrowUp, Mail } from 'lucide-react';
 import { personalInfo } from '../../data';
 import { useLanguage } from '../../i18n/LanguageContext';
-import { LinkedInIcon } from '../ui/BrandIcons';
 
 export default function Footer() {
   const { lang, t } = useLanguage();
@@ -20,16 +19,6 @@ export default function Footer() {
             {personalInfo.location[lang]}
           </p>
           <div className="mt-5 flex items-center gap-4">
-            <a
-              href={personalInfo.linkedin}
-              target="_blank"
-              rel="noreferrer"
-              className="inline-flex items-center gap-2 rounded-[var(--radius)] text-sm text-mist-muted transition-colors hover:text-signal"
-              aria-label={t.footer.linkedin}
-            >
-              <LinkedInIcon size={16} />
-              {t.footer.linkedin}
-            </a>
             <a
               href={`mailto:${personalInfo.email}`}
               className="inline-flex items-center gap-2 rounded-[var(--radius)] text-sm text-mist-muted transition-colors hover:text-signal"

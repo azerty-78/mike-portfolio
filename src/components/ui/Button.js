@@ -6,6 +6,7 @@ export default function Button({
   type = 'button',
   onClick,
   disabled = false,
+  download,
   ...props
 }) {
   const base =
@@ -19,7 +20,13 @@ export default function Button({
 
   if (href) {
     return (
-      <a href={href} className={classes} onClick={onClick} {...props}>
+      <a
+        href={href}
+        className={classes}
+        onClick={onClick}
+        {...(download ? { download: download === true ? true : download } : {})}
+        {...props}
+      >
         {children}
       </a>
     );

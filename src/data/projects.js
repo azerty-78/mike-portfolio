@@ -23,7 +23,7 @@ export const projects = [
   {
     id: 'restful-api',
     number: '03',
-    technologies: ['API REST', 'Backend'],
+    technologies: ['REST API'],
     image: null,
     liveUrl: null,
     githubUrl: null,

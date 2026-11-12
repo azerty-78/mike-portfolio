@@ -1,6 +1,6 @@
 # Mike Portfolio
 
-Portfolio personnel de **Lontchi Fontsa Michael**, ingénieur en génie logiciel.
+Portfolio personnel de **Michael Lontchi Fontsa**, développeur Full-Stack (Génie Logiciel).
 
 Site one-page premium, bilingue (FR / EN), pensé pour présenter le parcours, les compétences, les expériences et les projets de manière claire et professionnelle.
 
@@ -125,11 +125,11 @@ Dossier de sortie : `build`
 
 ## Auteur
 
-**Lontchi Fontsa Michael**  
-Ingénieur en Génie Logiciel — Yaoundé, Cameroun
+**Michael Lontchi Fontsa**  
+Développeur Full-Stack · Génie Logiciel — Yaoundé, Cameroun
 
 - Email : [lontchimike@gmail.com](mailto:lontchimike@gmail.com)
-- LinkedIn : [linkedin.com/in/lontchi](https://www.linkedin.com/in/lontchi/)
+- Téléphone : +237 699 657 458
 
 ## Licence
 

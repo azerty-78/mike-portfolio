@@ -1,10 +1,9 @@
 import { useState } from 'react';
-import { ArrowUpRight, Mail, Phone } from 'lucide-react';
+import { ArrowUpRight, Download, Mail, Phone } from 'lucide-react';
 import { personalInfo } from '../../data';
 import { useLanguage } from '../../i18n/LanguageContext';
 import Reveal from '../animations/Reveal';
 import Button from '../ui/Button';
-import { LinkedInIcon } from '../ui/BrandIcons';
 
 const initialForm = {
   name: '',
@@ -115,22 +114,18 @@ export default function Contact() {
                     {personalInfo.phone}
                   </a>
                 </li>
-                <li>
-                  <a
-                    href={personalInfo.linkedin}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="group inline-flex items-center gap-3 text-mist transition-colors hover:text-signal"
-                  >
-                    <LinkedInIcon size={16} className="text-signal" />
-                    linkedin.com/in/lontchi
-                    <ArrowUpRight
-                      size={14}
-                      className="opacity-0 transition-opacity group-hover:opacity-100"
-                    />
-                  </a>
-                </li>
               </ul>
+            </Reveal>
+
+            <Reveal delay={0.18}>
+              <Button
+                href={personalInfo.cvUrl}
+                download={personalInfo.cvFileName}
+                className="mt-8"
+              >
+                {t.contact.downloadCv}
+                <Download size={16} />
+              </Button>
             </Reveal>
           </div>
 
